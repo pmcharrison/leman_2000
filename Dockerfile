@@ -1,4 +1,5 @@
 FROM ubuntu:20.04
+LABEL org.opencontainers.image.source https://github.com/pmcharrison/leman_2000
 
 # Install the MCR dependencies and some things we'll need and download the MCR
 # from Mathworks -silently install it
