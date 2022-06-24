@@ -1,0 +1,58 @@
+To run within MATLAB (R2014b):
+- Add jsonlab-2.0 to path (including subfolders)
+- Add IPEMToolboc/IPEMToolbox to path (including subfolders)
+- Example command: leman_2000('IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/BartokScherzoSuiteOp14.wav', 'test.json', '0.1,1', '2,4', 5)
+
+To compile the MATLAB package:
+- Make sure your working directory is the top-level leman_2000 directory
+- Click Apps > Application Compiler
+- Enter 'leman_2000' as the application name (no quotes)
+- Add 'leman_2000.m' as the application main file
+- Under 'Files required for your application to run', add jsonlab-2.0, then add IPEMToolbox/IPEMToolbox
+- Click 'Package'
+- Wait until you see 'Packaging Complete'
+
+To run the compiled MATLAB package:
+- Example command: ./leman_2000/for_redistribution_files_only/run_leman_2000.sh ~/MATLAB/R2014b 'IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/BartokScherzoSuiteOp14.wav' 'test.json' 0.1,1 2,4 5
+
+To build the Docker image:
+
+sudo docker build -t leman_2000 .
+
+~~~
+
+Arguments:
+
+%   Input:
+%
+%   in_file = the input file
+%   out_file = output json file
+%   local_decay_sec = local decay (seconds). Can be a single number or a
+%                                               comma separated list
+%   global_decay_sec = global decay (seconds). Can be a single number or a 
+%                                               comma separated list
+%   detail = detail level. If greater than 1, the output will include the
+%   auditory nerve images and the periodicity pitch images.
+
+%   Output:
+%   
+%   audio_length_sec = length of the input audio file (seconds)
+%   num_channels = number of channels in the input audio file
+%   sample_rate = sample rate of the input audio file
+%
+%   auditory_nerve.images = a matrix of size [N M] representing the auditory nerve image,
+%            where N is the number of channels (currently 40) and
+%                  M is the number of samples
+%   auditory_nerve.image_sample_freq = sample freq of ANI (in Hz)
+%   auditory_nerve.image_filter_freqs = center frequencies used by the auditory model (in Hz)
+%
+%   periodicity_pitch.signal = periodicity pitch: a matrix of size
+%               inFrameWidth * length(inMatrix) / outSampleFreq 
+%   periodicity_pitch.sample_freq = sampling rate, equal to inSampleFreq/inFrameStepSize (in Hz)
+%   periodicity_pitch.pitch_periods = analyzed periods (in seconds)
+%   periodicity_pitch.filtered_auditory_nerve_images = bandpass filtered 
+%           auditory nerve images (at the original sample frequency)
+%
+%   local_global_comparison.local_decay_sec = local decay parameter (s)
+%   local_global_comparison.global_decay_sec = global decay parameter (s)
+%   local_global_comparison.running_correlation = vector of local-global correlations

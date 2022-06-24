@@ -3,7 +3,6 @@
 %   Input:
 %
 %   in_file = the input file
-%   in_dir = the input directory
 %   out_file = output json file
 %   local_decay_sec = local decay (seconds). Can be a single number or a
 %                                               comma separated list
@@ -37,7 +36,6 @@
 
 function res = leman_2000(...
     in_file, ...
-    in_dir, ...
     out_file, ...
     local_decay_sec, ... % typically 0.1
     global_decay_sec, ... % typically 1.5
@@ -48,7 +46,9 @@ warning('off', 'MATLAB:warning:FrequencyOutputObsolete');
 warning('off', 'MATLAB:audiovideo:wavread:functionToBeRemoved');
 warning('off', 'MATLAB:audiovideo:wavwrite:functionToBeRemoved');
 
-[s,fs] = IPEMReadSoundFile(in_file, in_dir);
+[in_dir, in_file_key, in_file_ext] = fileparts(in_file);
+in_file_name = strcat(in_file_key, in_file_ext);
+[s,fs] = IPEMReadSoundFile(in_file_name, in_dir);
 dim = size(s);
 num_channels = dim(1);
 
@@ -95,6 +95,8 @@ res.local_global_comparison = cell(n_combinations, 1);
 
 if n_combinations > 0
     for i = 1:n_combinations
+        disp(['Computing running correlation ', num2str(i), '/', num2str(n_combinations), '...']);
+        
         local_decay_sec_ = combinations(1, i);
         global_decay_sec_ = combinations(2, i);
         
