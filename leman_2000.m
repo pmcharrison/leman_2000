@@ -1,7 +1,13 @@
-% Output:
+
+
+%   Input:
+%
 %   in_file = the input file
 %   in_dir = the input directory
+%   out_file = output json file
 
+%   Output:
+% 
 %   auditory_nerve_images = a matrix of size [N M] representing the auditory nerve image,
 %            where N is the number of channels (currently 40) and
 %                  M is the number of samples
@@ -27,6 +33,9 @@ function res = leman_2000(...
 dim = size(s);
 num_channels = dim(1);
 
+local_decay_sec = parse_array(local_decay_sec);
+global_decay_sec = parse_array(global_decay_sec);
+
 if num_channels == 2
     % Convert to mono
     s = (s(1,:) + s(2,:)) / 2;
@@ -41,17 +50,12 @@ audio_length_sec = length(s) / fs;
 % Calculate the periodicity-pitch image
 [PP,PPFreq,PPPeriods,PPFANI] = IPEMPeriodicityPitch(ANI,ANIFreq);
 
-% Calculate the contextuality index
-[~,~,~,~,LocalGlobalComparison] = ...
-    IPEMContextualityIndex(PP,PPFreq,PPPeriods,[],local_decay_sec,global_decay_sec,[],0);
-
 res = struct(...
     'audio_length_sec', audio_length_sec, ...
     'num_channels', num_channels, ...
     'sample_rate', fs, ...
     'local_decay_sec', local_decay_sec, ...
-    'global_decay_sec', global_decay_sec, ...
-    'local_global_comparison', LocalGlobalComparison);
+    'global_decay_sec', global_decay_sec);
 
 if detail > 1
     res.auditory_nerve = struct(...
@@ -66,5 +70,34 @@ if detail > 1
         'filtered_auditory_nerve_images', PPFANI);
 end
 
+combinations = combvec(local_decay_sec, global_decay_sec);
+dim_combinations = size(combinations);
+n_combinations = dim_combinations(2);
+
+res.local_global_comparison = cell(n_combinations, 1)
+
+if n_combinations > 0
+    for i = 1:n_combinations
+        local_decay_sec_ = combinations(1, i);
+        global_decay_sec_ = combinations(2, i);
+        
+        [~,~,~,~,LocalGlobalComparison] = ...
+            IPEMContextualityIndex(PP,PPFreq,PPPeriods,[],local_decay_sec_,global_decay_sec_,[],0);
+        
+        res.local_global_comparison(i, 1) = {struct(...
+            'local_decay_sec', local_decay_sec_, ...
+            'global_decay_sec', global_decay_sec_, ...
+            'running_correlation', LocalGlobalComparison)};
+    end
+end
+
 savejson('', res, out_file);
+end
+
+function array = parse_array(x)
+if ischar(x)
+    array = str2double(strsplit(x, ','));
+else
+    array = x;
+end
 end
