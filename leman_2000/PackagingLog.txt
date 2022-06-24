@@ -1,0 +1,99 @@
+ant:
+<ant>
+  <mkdir dir="/home/cms/Documents/leman_2000/leman_2000/for_redistribution" />
+  <mkdir dir="/home/cms/Documents/leman_2000/leman_2000/for_testing" />
+  <mkdir dir="/home/cms/Documents/leman_2000/leman_2000/for_redistribution_files_only" />
+</ant>
+mcc -o leman_2000 -W WinMain:leman_2000 -T link:exe -d /home/cms/Documents/leman_2000/leman_2000/for_testing -v /home/cms/Documents/leman_2000/leman_2000.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/.gitignore -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/_CommentTemplate.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/AUTHORS.txt -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/BartokScherzoSuiteOp14.wav -a /home/cms/Documents/leman_2000/jsonlab-2.0/base64decode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/base64encode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/ChangeLog.txt -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Changes.txt -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Temp/CleanUpGarbageInThisDirectory.bat -a Contents -a Contents -a Contents -a Contents -a Contents -a /home/cms/Documents/leman_2000/jsonlab-2.0/decodevarname.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/demo_jsonlab_basic.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/demo_msgpack_basic.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/demo_ubjson_basic.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/DESCRIPTION -a /home/cms/Documents/leman_2000/jsonlab-2.0/encodevarname.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/example1.json -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/example2.json -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/example3.json -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/example4.json -a /home/cms/Documents/leman_2000/jsonlab-2.0/fast_match_bracket.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/FilterFrequencies.txt -a /home/cms/Documents/leman_2000/jsonlab-2.0/gendocs.sh -a /home/cms/Documents/leman_2000/jsonlab-2.0/genlog.sh -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/gpl.txt -a /home/cms/Documents/leman_2000/jsonlab-2.0/gzipdecode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/gzipencode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/INDEX -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/InternChanges.txt -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMAdaptLevel.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMAMTone.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMAnimateSlices.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMBatchExtractSoundFragment.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMBellShape.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMBlockDC.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcANI.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcANIFromFile.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcCentroid.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcCentroidWidth.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcFFT.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcFlux.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcMeanAndVariance.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcNoteFrequency.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcOnsets.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcOnsetsFromANI.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcPeakLevel.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcRMS.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcRoughnessOfToneComplex.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcRoughnessOverSubparts.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcSpectrogram.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCalcZeroCrossingRate.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/IPEMCheckVersion.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMClip.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCombFilter.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMContextualityIndex.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMConvertToAMNoise.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMConvertToClickSound.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMConvertToMIDINoteNr.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMConvertToNoteString.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCountZeroCrossings.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMCreateMask.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/IPEMDemoMECRhythmExtraction.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/IPEMDemoStartMEC.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMDoOnsets.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMEnsureDirectory.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMEnvelopeFollower.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMExportFigures.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMExtractSegments.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMFadeLinear.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMFindAllPeaks.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMFindNearestMinima.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMFindNoteFromFrequency.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGenerateBandPassedNoise.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGenerateFrameBasedSegments.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGeneratePitchShiftScript.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetAllCombinations.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetCrestFactor.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetFileList.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetKurtosis.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetLevel.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetRolloff.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetRoughnessFFTReference.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMGetSkew.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMHandleInputArguments.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMHarmonicTone.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMHarmonicToneComplex.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMLeakyIntegration.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMLoadANI.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMMECAnalysis.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMMECExtractPatterns.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMMECFindBestPeriods.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMMECReSynthUI.fig -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMMECReSynthUI.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMMECSaveResults.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMMECSynthesis.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMNormalize.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMOnsetPattern.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMOnsetPatternFilter.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMOnsetPeakDetection.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMOnsetPeakDetection1Channel.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMPeriodicityPitch.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMPlaySoundWithCursor.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMPlotMultiChannel.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMProcessAuditoryModel.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMProcessAuditoryModelSafe.mexa64 -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMReadSoundFile.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMReplaceSubStringInFileNames.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMRescale.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMReshape.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMRippleFilter.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/IPEMRootDir.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMRotateMatrix.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMRoughnessFFT.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMRoughnessOfSoundPairs.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMSaveANI.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMSaveVar.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMSetFigureLayout.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/IPEMSetup.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/IPEMSetupPreferences.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMShepardTone.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMShepardToneComplex.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMShowSoundFile.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMSineComplex.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMSnipSoundFile.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMSnipSoundFileAtOnsets.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMStripFileSpecification.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMToneScaleComparison.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMToolboxVersion.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Common/IPEMWriteSoundFile.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/isoctavemesh.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/jdatadecode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/jdataencode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/jload.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/jsave.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/images/jsonlab-banner.png -a /home/cms/Documents/leman_2000/jsonlab-2.0/images/jsonlab-logo.png -a /home/cms/Documents/leman_2000/jsonlab-2.0/jsonlab.prj -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/jsonlab_basictest.matlab -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/jsonlab_selftest.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/jsonlab_selftest.matlab -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/jsonlab_speedtest.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/examples/jsonlab_ubjson_basictest.matlab -a /home/cms/Documents/leman_2000/jsonlab-2.0/jsonopt.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/leman_2000.prj -a /home/cms/Documents/leman_2000/jsonlab-2.0/LICENSE_BSD.txt -a /home/cms/Documents/leman_2000/jsonlab-2.0/loadbj.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/loadjson.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/loadmsgpack.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/loadubjson.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lz4decode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lz4encode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lz4hcdecode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lz4hcencode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lzipdecode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lzipencode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lzmadecode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/lzmaencode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/match_bracket.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/mergestruct.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/nestbracket2dim.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/package.json -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/PhotekTheLightening.wav -a /home/cms/Documents/leman_2000/jsonlab-2.0/README.rst -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/ReadMe.txt -a /home/cms/Documents/leman_2000/jsonlab-2.0/README.txt -a /home/cms/Documents/leman_2000/jsonlab-2.0/test/run_jsonlab_test.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/savebj.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/savejson.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/savemsgpack.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/saveubjson.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/test/test_jsonlab.m -a /home/cms/Documents/leman_2000/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/TomWaitsBigInJapan.wav -a /home/cms/Documents/leman_2000/jsonlab-2.0/varargin2struct.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/zlibdecode.m -a /home/cms/Documents/leman_2000/jsonlab-2.0/zlibencode.m 
+Name is nonexistent or not a directory: /home/cms/Documents/jsonlab-2.0
+Name is nonexistent or not a directory: /home/cms/Documents/jsonlab-2.0/examples
+Name is nonexistent or not a directory: /home/cms/Documents/jsonlab-2.0/images
+Name is nonexistent or not a directory: /home/cms/Documents/jsonlab-2.0/test
+Name is nonexistent or not a directory: /home/cms/Documents/IPEMToolbox/IPEMToolbox
+Name is nonexistent or not a directory: /home/cms/Documents/IPEMToolbox/IPEMToolbox/Common
+Name is nonexistent or not a directory: /home/cms/Documents/IPEMToolbox/IPEMToolbox/Demos
+Name is nonexistent or not a directory: /home/cms/Documents/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction
+Name is nonexistent or not a directory: /home/cms/Documents/IPEMToolbox/IPEMToolbox/Temp
+[Warning: Name is nonexistent or not a directory:
+/home/cms/Documents/IPEMToolbox/IPEMToolbox] 
+[Warning: Name is nonexistent or not a directory:
+/home/cms/Documents/IPEMToolbox/IPEMToolbox/Common] 
+[Warning: Name is nonexistent or not a directory:
+/home/cms/Documents/IPEMToolbox/IPEMToolbox/Demos] 
+[Warning: Name is nonexistent or not a directory:
+/home/cms/Documents/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction] 
+[Warning: Name is nonexistent or not a directory:
+/home/cms/Documents/IPEMToolbox/IPEMToolbox/Temp] 
+Compiler version: 5.2 (R2014b)
+Dependency analysis by REQUIREMENTS.
+[Warning: Adding path "/home/cms/Documents/leman_2000" to Compiler path
+instance.] 
+Parsing file "/home/cms/Documents/leman_2000/leman_2000.m"
+	(Referenced from: "Compiler Command Line").
+Invalid character was detected.
+Warning: The source file '/tmp/262c9bWl2Su_156361Contents.m.info' has a name conflict with another source file in CTF. It is saved as '/IPEMToolbox/IPEMToolbox/Contents_1.m' in the CTF. Please verify that your application works as expected.
+Deleting 58 temporary MEX authorization files.
+Removing: '/tmp/262c9G0PJns_156361.auth'.
+Removing: '/tmp/262c9tHwaBu_156361.auth'.
+Removing: '/tmp/262c9fpTMst_156361.auth'.
+Removing: '/tmp/262c9zLrwCs_156361.auth'.
+Removing: '/tmp/262c9k0uO5u_156361.auth'.
+Removing: '/tmp/262c9cvBOVu_156361.auth'.
+Removing: '/tmp/262c9aasoXv_156361.auth'.
+Removing: '/tmp/262c9VlbD7v_156361.auth'.
+Removing: '/tmp/262c9r9Xluw_156361.auth'.
+Removing: '/tmp/262c91EN6Xu_156361.auth'.
+Removing: '/tmp/262c9olPr6v_156361.auth'.
+Removing: '/tmp/262c991mq4t_156361.auth'.
+Removing: '/tmp/262c9S5peWv_156361.auth'.
+Removing: '/tmp/262c9RMiBmu_156361.auth'.
+Removing: '/tmp/262c9GH2iYs_156361.auth'.
+Removing: '/tmp/262c9raPZHv_156361.auth'.
+Removing: '/tmp/262c9EBPmEs_156361.auth'.
+Removing: '/tmp/262c91pqq2v_156361.auth'.
+Removing: '/tmp/262c9qcNtKt_156361.auth'.
+Removing: '/tmp/262c9d5Zjvv_156361.auth'.
+Removing: '/tmp/262c9i1KJFt_156361.auth'.
+Removing: '/tmp/262c9ucs1Vu_156361.auth'.
+Removing: '/tmp/262c9r8uRIv_156361.auth'.
+Removing: '/tmp/262c9maUkut_156361.auth'.
+Removing: '/tmp/262c9Tt2pSr_156361.auth'.
+Removing: '/tmp/262c9kbhkEv_156361.auth'.
+Removing: '/tmp/262c9Qmva2v_156361.auth'.
+Removing: '/tmp/262c9ruGlOs_156361.auth'.
+Removing: '/tmp/262c9gTDIAs_156361.auth'.
+Removing: '/tmp/262c9FJ4Vgw_156361.auth'.
+Removing: '/tmp/262c9lzQGRs_156361.auth'.
+Removing: '/tmp/262c95Kdiut_156361.auth'.
+Removing: '/tmp/262c9SoePIv_156361.auth'.
+Removing: '/tmp/262c9b8tXOt_156361.auth'.
+Removing: '/tmp/262c9rUQhYr_156361.auth'.
+Removing: '/tmp/262c9BSIQ9u_156361.auth'.
+Removing: '/tmp/262c9YnxBtw_156361.auth'.
+Removing: '/tmp/262c922Goev_156361.auth'.
+Removing: '/tmp/262c91tufyt_156361.auth'.
+Removing: '/tmp/262c9J56piv_156361.auth'.
+Removing: '/tmp/262c9bluyNv_156361.auth'.
+Removing: '/tmp/262c9dMqTnw_156361.auth'.
+Removing: '/tmp/262c93GIllt_156361.auth'.
+Removing: '/tmp/262c9KM5bJt_156361.auth'.
+Removing: '/tmp/262c9Zy9Fft_156361.auth'.
+Removing: '/tmp/262c9K345ds_156361.auth'.
+Removing: '/tmp/262c9moWIrs_156361.auth'.
+Removing: '/tmp/262c93z0wSr_156361.auth'.
+Removing: '/tmp/262c9ooggBt_156361.auth'.
+Removing: '/tmp/262c9d3rP1u_156361.auth'.
+Removing: '/tmp/262c9NIB7Eu_156361.auth'.
+Removing: '/tmp/262c9PRvH0u_156361.auth'.
+Removing: '/tmp/262c9qjrSOv_156361.auth'.
+Removing: '/tmp/262c9qnX68s_156361.auth'.
+Removing: '/tmp/262c9EVITYs_156361.auth'.
+Removing: '/tmp/262c9SoLTJu_156361.auth'.
+Removing: '/tmp/262c91wkQqs_156361.auth'.
+Removing: '/tmp/262c9z0ozev_156361.auth'.
+Generating file "/home/cms/Documents/leman_2000/leman_2000/for_testing/readme.txt".
+Generating file "/home/cms/Documents/leman_2000/leman_2000/for_testing/run_leman_2000.sh".
+Packaging...
+Creating the bundle...
+Web based installer created at /home/cms/Documents/leman_2000/leman_2000/for_redistribution/MyAppInstaller_web.install.
+Packaging complete.
