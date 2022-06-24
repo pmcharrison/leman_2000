@@ -1,4 +1,4 @@
-ame: Build and Publish
+name: Build and publish
 
 on:
   # run it on push to the default repository branch
