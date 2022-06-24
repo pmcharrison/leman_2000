@@ -19,6 +19,18 @@ To build the Docker image:
 
 sudo docker build -t leman_2000 .
 
+To run an analysis from the Docker image:
+
+sudo docker run \
+    -v $PWD/IPEMToolbox/IPEMToolbox/Demos/MECPatternExtraction/BartokScherzoSuiteOp14.wav:input_file.wav \
+    -v $PWD/output:output \
+    leman 2000 input_file.wav output/output_analysis.json \
+    0.1 4 \  # local and global decay parameters
+    5        # detail level
+
+You can replace the input file and the output directory with your own values.
+Note that the paths passsed to -v must be full paths, not relative paths.
+
 ~~~
 
 Arguments:
