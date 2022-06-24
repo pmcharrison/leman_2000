@@ -5,21 +5,35 @@
 %   in_file = the input file
 %   in_dir = the input directory
 %   out_file = output json file
+%   local_decay_sec = local decay (seconds). Can be a single number or a
+%                                               comma separated list
+%   global_decay_sec = global decay (seconds). Can be a single number or a 
+%                                               comma separated list
+%   detail = detail level. If greater than 1, the output will include the
+%   auditory nerve images and the periodicity pitch images.
 
 %   Output:
-% 
-%   auditory_nerve_images = a matrix of size [N M] representing the auditory nerve image,
+%   
+%   audio_length_sec = length of the input audio file (seconds)
+%   num_channels = number of channels in the input audio file
+%   sample_rate = sample rate of the input audio file
+%
+%   auditory_nerve.images = a matrix of size [N M] representing the auditory nerve image,
 %            where N is the number of channels (currently 40) and
 %                  M is the number of samples
-%   auditory_nerve_image_sample_freq = sample freq of ANI (in Hz)
-%   auditory_nerve_image_filter_freqs = center frequencies used by the auditory model (in Hz)
-%   periodicity_pitch_signal = periodicity pitch: a matrix of size
+%   auditory_nerve.image_sample_freq = sample freq of ANI (in Hz)
+%   auditory_nerve.image_filter_freqs = center frequencies used by the auditory model (in Hz)
+%
+%   periodicity_pitch.signal = periodicity pitch: a matrix of size
 %               inFrameWidth * length(inMatrix) / outSampleFreq 
-%   periodicity_pitch_sample_freq = sampling rate, equal to inSampleFreq/inFrameStepSize (in Hz)
-%   filtered_auditory_nerve_images = analyzed periods (in s)
-%   outFANI = bandpass filtered auditory nerve images (at the original sample
-%             frequency)
-%   local_global_comparison = vector of local-global correlations
+%   periodicity_pitch.sample_freq = sampling rate, equal to inSampleFreq/inFrameStepSize (in Hz)
+%   periodicity_pitch.pitch_periods = analyzed periods (in seconds)
+%   periodicity_pitch.filtered_auditory_nerve_images = bandpass filtered 
+%           auditory nerve images (at the original sample frequency)
+%
+%   local_global_comparison.local_decay_sec = local decay parameter (s)
+%   local_global_comparison.global_decay_sec = global decay parameter (s)
+%   local_global_comparison.running_correlation = vector of local-global correlations
 
 function res = leman_2000(...
     in_file, ...
@@ -28,6 +42,11 @@ function res = leman_2000(...
     local_decay_sec, ... % typically 0.1
     global_decay_sec, ... % typically 1.5
     detail) 
+
+warning('off', 'MATLAB:warning:OnceAndAlwaysObsolete');
+warning('off', 'MATLAB:warning:FrequencyOutputObsolete');
+warning('off', 'MATLAB:audiovideo:wavread:functionToBeRemoved');
+warning('off', 'MATLAB:audiovideo:wavwrite:functionToBeRemoved');
 
 [s,fs] = IPEMReadSoundFile(in_file, in_dir);
 dim = size(s);
@@ -53,9 +72,7 @@ audio_length_sec = length(s) / fs;
 res = struct(...
     'audio_length_sec', audio_length_sec, ...
     'num_channels', num_channels, ...
-    'sample_rate', fs, ...
-    'local_decay_sec', local_decay_sec, ...
-    'global_decay_sec', global_decay_sec);
+    'sample_rate', fs);
 
 if detail > 1
     res.auditory_nerve = struct(...
@@ -74,7 +91,7 @@ combinations = combvec(local_decay_sec, global_decay_sec);
 dim_combinations = size(combinations);
 n_combinations = dim_combinations(2);
 
-res.local_global_comparison = cell(n_combinations, 1)
+res.local_global_comparison = cell(n_combinations, 1);
 
 if n_combinations > 0
     for i = 1:n_combinations
